@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-f', '--filename', help='The location of the HTML output from Kindle Reader')
-parser.add_argument('-dg', '--double_guitar', help='By popular demand...')
+parser.add_argument('-dg', '--double_guitar', action='store_true',  help='By popular demand...')
 
 args = parser.parse_args()
 
