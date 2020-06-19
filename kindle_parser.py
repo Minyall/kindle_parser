@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-f', '--filename', help='The location of the HTML output from Kindle Reader')
+parser.add_argument('-dg', '--double_guitar', action='store_true',  help='By popular demand...')
 
 args = parser.parse_args()
 
@@ -130,3 +131,7 @@ with open(filename, 'w') as f:
             f.write(f"### {highlight}\n\n")
             prior_highlight = highlight
         f.write(quote)
+
+if args.double_guitar:
+    from double_guitar import a
+    print(a)
